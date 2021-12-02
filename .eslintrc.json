@@ -1,0 +1,17 @@
+{
+  "env": {
+      "browser": false,
+      "es2020": true,
+      "es6": true
+  },
+  "extends": "airbnb-base",
+  "parserOptions": {
+      "ecmaVersion": 11
+  },
+  "rules": {
+      "max-len": [2, 120, 4, {"ignoreUrls": true}],
+      "no-restricted-syntax": 0,
+      "no-await-in-loop": 0,
+      "linebreak-style": 0
+  }
+}
