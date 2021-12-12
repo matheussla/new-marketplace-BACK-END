@@ -16,7 +16,7 @@ const createShop = async (req, res) => {
 
 const getShops = async (req, res) => {
   try {
-    const shops = await Shop.findAll();
+    const shops = await Shop.find({});
 
     if (!shops) {
       return res.status(404).send({ error: 'Not Found' });

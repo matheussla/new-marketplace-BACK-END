@@ -1,4 +1,3 @@
-const bcrypt = require('bcryptjs');
 const mongoose = require('../../database');
 
 const ShopSchema = new mongoose.Schema({
@@ -22,7 +21,6 @@ const ShopSchema = new mongoose.Schema({
   products: {
     type: Array,
     required: false,
-    select: false,
   },
 });
 
