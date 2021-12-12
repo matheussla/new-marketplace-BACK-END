@@ -1,6 +1,6 @@
 const server = require('./server');
 
-const port = 3001;
+const port = process.env.PORT || 5000;
 
 console.log(`----------http://localhost:${port}----------`);
 server.listen(port);
