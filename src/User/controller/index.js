@@ -10,6 +10,7 @@ const authentication = async (req, res) => {
 
     user.password = undefined;
 
+    res.header("Access-Control-Allow-Origin", "*");
     return res.send({ user });
   } catch (err) {
     return res.status(400).send({ error: 'Failed' });
@@ -26,6 +27,7 @@ const getUser = async (req, res) => {
       return res.status(400).send({ error: 'Invalid data' });
     }
 
+    res.header("Access-Control-Allow-Origin", "*");
     return res.status(200).send(user);
   } catch (err) {
     return res.status(500).send({ error: 'Failed' });
