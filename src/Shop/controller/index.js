@@ -8,6 +8,7 @@ const createShop = async (req, res) => {
 
     const shop = await Shop.create(req.body);
 
+    res.header("Access-Control-Allow-Origin", "*");
     return res.send({ shop });
   } catch (err) {
     return res.status(400).send({ error: 'Failed' });
@@ -22,6 +23,7 @@ const getShops = async (req, res) => {
       return res.status(404).send({ error: 'Not Found' });
     }
 
+    res.header("Access-Control-Allow-Origin", "*");
     return res.status(200).send(shops);
   } catch (err) {
     return res.status(500).send({ error: 'Failed' });
@@ -38,6 +40,7 @@ const getShop = async (req, res) => {
       return res.status(404).send({ error: 'Not Found' });
     }
 
+    res.header("Access-Control-Allow-Origin", "*");
     return res.status(200).send(shop);
   } catch (err) {
     return res.status(500).send({ error: 'Failed' });
